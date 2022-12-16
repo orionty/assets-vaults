@@ -135,6 +135,10 @@ app.post("/sessionLogin", (req, res) => {
 //   res.clearCookie("session");
 //   res.redirect("/sessionLogin");
 // });
+
+app.get("/", (req, res) => {
+  res.send("Hello API")
+}); 
       
       app.get("/logout", (req, res) => {
         res.sendFile(path.join(__dirname, './views/logout.html'))
