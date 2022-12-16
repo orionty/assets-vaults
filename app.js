@@ -137,10 +137,10 @@ app.post("/sessionLogin", (req, res) => {
 // });
 
 app.get("/", (req, res) => {
-  res.send("Hello API")
+  res.send("Welcome to Assets Vaults")
 }); 
       
-      app.get("/logout", (req, res) => {
+     app.get("/logout", (req, res) => {
         res.sendFile(path.join(__dirname, './views/logout.html'))
       });
 
@@ -201,7 +201,7 @@ app.post("/mail", (req, res, next) => {
   });
 });
 //  mail service
-app.post("/send/mail-service", (req, res, next) => {
+app.post("/mail-service", (req, res, next) => {
   const email = req.body.email;
   const message = `Name: ${req.body.name} \n\n Email: ${req.body.email} \n\n Address: ${req.body.address}`;
 
