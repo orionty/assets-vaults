@@ -178,7 +178,7 @@ app.get("/admin", (req, res) => {
 
 
 // contact mail
-app.post("/send/mail", (req, res, next) => {
+app.post("/mail", (req, res, next) => {
   const email = req.body.email;
   const message = `Name: ${req.body.name} \n\n Email: ${req.body.email} \n\n Message: ${req.body.message}`;
 
